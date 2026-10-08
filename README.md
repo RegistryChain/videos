@@ -4,7 +4,43 @@ Background videos for the Entity.ID conference booth: play on loop in fullscreen
 
 Entity.ID is **The Universal Verified Facts Identifier** for companies, NGOs, DAOs, AI agents, and jurisdictions.
 
-## v5 (recommended)
+## v6 (recommended)
+
+An **80 second**, **seamless**, **silent** **1920×1080** loop with slower pacing so every card holds about **4–5 seconds**. All facts come from Entity.ID records and on-chain agent registration data; people are shown as **initials only**.
+
+![Entity.ID booth loop v6 poster](entityid-booth/poster-v6.png)
+
+| File | Role |
+|------|------|
+| [`entityid-booth/entityid-booth-loop-v6-1080p.mp4`](entityid-booth/entityid-booth-loop-v6-1080p.mp4) | Booth playback master (~11.0 MB) |
+| [`entityid-booth/entityid-booth-loop-v6-720p.mp4`](entityid-booth/entityid-booth-loop-v6-720p.mp4) | Lighter preview copy (~9.1 MB) |
+| [`entityid-booth/poster-v6.png`](entityid-booth/poster-v6.png) | Opening-frame still |
+| [`entityid-booth/src/build_loop_v6.py`](entityid-booth/src/build_loop_v6.py) | Render script |
+
+**SHA-256 (1080p):** `0230b7a5b44f7349c0f45786c8f69ba8dff64cd79cd9dd152a2d035da1422282`
+
+### Scene list (v6, in order)
+
+1. The **Entity.ID** wordmark with **"Universal Verified Facts ID"**, then six real IDs appear one at a time.
+2. The AI agent **speak5.ai.entity.id**: **Know-Your-Agent** (anchored to its subject of rights speak5.public.entity.id, KYC-verified custodian) and **Attribution** from its on-chain agent registration.
+3. **northstar-growth.public.entity.id**: **Who is who** (two partners as initials) and **Who owns what** (60/40).
+4. **warren-equities-inc.us-de.entity.id** as one continuous company story: its card, owners opening upward to the ultimate beneficial owner **global-partners-lp.us-de**, then its subsidiaries.
+5. **Compliance-by-modularity** for that company: seven labelled layers (Entity.ID verified identifier, Treasury assets & payments, Entity legal core, Members who's in, roles & equity, Compliance rules, filings, reports, Dispute arbitration & resolution, Governance votes, bylaws, decisions), plus a **Jurisdictional conformity** module (KYC/AML, State Reg, Tax ID) that plugs in per jurisdiction.
+6. Stats (2,935,661 / 311 / 226,467), **"Every entity. One verifiable identity."**, and the CTA **"Get your ID → app.entity.id"** with a QR code.
+
+```bash
+mpv --loop=inf --fs entityid-booth/entityid-booth-loop-v6-1080p.mp4
+```
+
+```bash
+python entityid-booth/src/build_loop_v6.py
+```
+
+Requires [ffmpeg](https://ffmpeg.org/), [Pillow](https://python-pillow.org/), [numpy](https://numpy.org/), and [qrcode](https://pypi.org/project/qrcode/); the Inter font is bundled in `entityid-booth/src/fonts` (SIL OFL), or set `ENTITYID_FONT` to another path.
+
+---
+
+## v5 (previous version)
 
 A **54 second**, **seamless**, **silent** **1920×1080** loop in the style of the deck's **"Universal Verified Facts Entity.ID"** slide, decluttered for reading from a distance. All facts come from Entity.ID records and on-chain agent registration data; people are shown as **initials only**.
 
