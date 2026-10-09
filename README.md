@@ -4,7 +4,43 @@ Background videos for the Entity.ID conference booth: play on loop in fullscreen
 
 Entity.ID is **The Universal Verified Facts Identifier** for companies, NGOs, DAOs, AI agents, and jurisdictions.
 
-## v6 (recommended)
+## v7 (recommended)
+
+An **80 second**, **seamless**, **silent** **1920×1080** loop. Text is **pixel-steady**: the camera only moves between scenes and is fully still during each hold, and each card holds about **5 seconds**. All facts come from Entity.ID records and on-chain agent registration data; people are shown as **initials only**.
+
+![Entity.ID booth loop v7 poster](entityid-booth/poster-v7.png)
+
+| File | Role |
+|------|------|
+| [`entityid-booth/entityid-booth-loop-v7-1080p.mp4`](entityid-booth/entityid-booth-loop-v7-1080p.mp4) | Booth playback master (~5.8 MB) |
+| [`entityid-booth/entityid-booth-loop-v7-720p.mp4`](entityid-booth/entityid-booth-loop-v7-720p.mp4) | Lighter preview copy (~4.7 MB) |
+| [`entityid-booth/poster-v7.png`](entityid-booth/poster-v7.png) | Opening-frame still |
+| [`entityid-booth/src/build_loop_v7.py`](entityid-booth/src/build_loop_v7.py) | Render script |
+
+**SHA-256 (1080p):** `03c138a6beaa1178157aea826168413cf0876ba7e9ee3eec6d8fba59550259ba`
+
+### Scene list (v7, in order)
+
+1. The **Entity.ID** wordmark with **"Universal Verified Facts ID"**, then six real IDs appear one at a time.
+2. The AI agent **speak5.ai.entity.id**: **Know-Your-Agent** (anchored to its subject of rights speak5.public.entity.id, KYC-verified custodian) and **Attribution** from its on-chain registration.
+3. **northstar-growth.public.entity.id**: **Who is who** (two partners as initials) and **Who owns what** (60/40).
+4. The ultimate beneficial owner, a person shown as initials (**A.T.**), and the entities they own with their shares (northstar-growth.public 60%, compass-residency.public 100%, field-notes-by-ace.public 20%).
+5. **"One identifier. Web2 and Web3."**: the same ID typed in a browser and sent to from a wallet (illustrative UI mock-up).
+6. Stats (2,935,661 / 311 / 226,467), **"Every entity. One verifiable identity."**, and the CTA **"Get your ID → app.entity.id"** with a QR code.
+
+```bash
+mpv --loop=inf --fs entityid-booth/entityid-booth-loop-v7-1080p.mp4
+```
+
+```bash
+python entityid-booth/src/build_loop_v7.py
+```
+
+Requires [ffmpeg](https://ffmpeg.org/), [Pillow](https://python-pillow.org/), [numpy](https://numpy.org/), and [qrcode](https://pypi.org/project/qrcode/); the Inter font is bundled in `entityid-booth/src/fonts` (SIL OFL), or set `ENTITYID_FONT` to another path.
+
+---
+
+## v6 (previous version)
 
 An **80 second**, **seamless**, **silent** **1920×1080** loop with slower pacing so every card holds about **4–5 seconds**. All facts come from Entity.ID records and on-chain agent registration data; people are shown as **initials only**.
 
